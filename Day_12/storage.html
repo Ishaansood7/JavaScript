@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage & Cookies</title>
+</head>
+
+<body>
+    <script>
+        // localStorage
+        /* 
+        Store - setItem("key", "value")
+        Fetch - getItem()
+        Update - setItem()
+        Delete - removeItem()
+        */
+        localStorage.setItem("name", "Ishaan");
+        localStorage.getItem("name");
+        localStorage.removeItem("name");
+        localStorage.setItem("name", "Aryan");
+
+        //sessionStorage - same as localStorage but written on console
+
+        //Cookies - storing small data (4kb)
+        /* On console -
+        document.cookie = "email = ishaan@test.com";
+        document.cookie = "age = 20 ";
+        */
+    </script>
+</body>
+
+</html>

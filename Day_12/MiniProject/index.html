@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>🎓 Student Registration</h2>
+
+        <!-- Success Message (Hidden by default) -->
+        <div id="successMessage" class="success-alert hidden">
+            ✅ Registration successful! Welcome to the course.
+        </div>
+
+        <form id="registrationForm" novalidate>
+
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="e.g. John Doe">
+                <small class="error-text">Name cannot be empty</small>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="student@example.com">
+                <small class="error-text">Email must contain "@"</small>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="1234567890">
+                <small class="error-text">Phone must be exactly 10 digits</small>
+            </div>
+
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Must be 18 or older">
+                <small class="error-text">Age must be 18+</small>
+            </div>
+
+            <div class="input-group gender-group">
+                <label>Gender</label>
+                <div class="radio-container">
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </div>
+                <small id="genderError" class="error-text">Please select a gender</small>
+            </div>
+
+            <div class="input-group">
+                <label for="course">Select Course</label>
+                <select id="course">
+                    <option value="">-- Choose a Course --</option>
+                    <option value="cs">BCA</option>
+                    <option value="tech">BTech</option>
+                    <option value="science">BSc</option>
+                    <option value="law">LLB</option>
+                    <option value="commerce">BCom</option>
+                </select>
+                <small class="error-text">Please select a course</small>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Min 8 characters">
+                <small class="error-text">Password must be at least 8 characters</small>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Must match password">
+                <small class="error-text">Passwords do not match</small>
+            </div>
+
+            <button type="submit" id="submitBtn">Register Student</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

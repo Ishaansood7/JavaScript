@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>📚 City Library Manager</h1>
+        </header>
+
+        <section class="controls">
+            <div class="add-item-card">
+                <h3>Add New Item</h3>
+                <form id="addItemForm">
+                    <input type="text" id="titleInput" placeholder="Title" required>
+                    <input type="text" id="authorInput" placeholder="Author/Publisher" required>
+
+                    <select id="typeInput">
+                        <option value="book">Book</option>
+                        <option value="magazine">Magazine</option>
+                    </select>
+
+                    <!-- Dynamic field: changes based on type -->
+                    <input type="text" id="extraInput" placeholder="Genre" required>
+
+                    <button type="submit">Add to Library</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="catalog">
+            <h2>Library Catalog</h2>
+            <div id="libraryContainer" class="grid-container">
+                <!-- Library items will be injected here by JS -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

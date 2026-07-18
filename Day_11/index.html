@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Task Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Kanban Task Board</h1>
+    </header>
+
+    <main class="board-container">
+        <!-- CONTROLS SECTION -->
+        <section class="controls">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter Task Title...">
+                <button id="addBtn">Add Task</button>
+            </div>
+            <div class="search-group">
+                <input type="text" id="searchInput" placeholder="🔍 Search tasks...">
+            </div>
+        </section>
+
+        <!-- BOARD LAYOUT -->
+        <section class="board">
+
+            <!-- TO DO COLUMN -->
+            <div class="column">
+                <h2 class="col-header todo-header">To Do (<span id="count-todo">0</span>)</h2>
+                <div class="task-list" id="list-todo">
+                    <!-- Tasks inject here -->
+                </div>
+            </div>
+
+            <!-- IN PROGRESS COLUMN -->
+            <div class="column">
+                <h2 class="col-header progress-header">In Progress (<span id="count-progress">0</span>)</h2>
+                <div class="task-list" id="list-progress">
+                    <!-- Tasks inject here -->
+                </div>
+            </div>
+
+            <div class="column">
+                <h2 class="col-header done-header">Done (<span id="count-done">0</span>)</h2>
+                <div class="task-list" id="list-done">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Form Validation</title>
+    <style>
+        small {
+            color: red;
+            font-size: 12px;
+        }
+
+        #impt {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input pattern="[a-z]{3,8}" required minlength="3" maxlength="10" id="name" type="text" placeholder="name">
+        <div id="impt">
+            <br>
+            <small>Your name should be greater than 2 characters</small>
+        </div>
+        <br><br>
+        <input id="email" type="email" placeholder="email">
+        <br><br>
+        <input id="password" type="password" placeholder="password">
+        <br><br>
+        <select>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select>
+        <br><br>
+        <textarea placeholder="Tell Us About You"></textarea>
+        <br><br>
+
+        <input type="submit">
+    </form>
+
+    <script>
+        let name = document.querySelector("#name");
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", function (dets) {
+            dets.preventDefault(); //Preventing to submit the form
+
+            if (nm.value.length <= 2) {
+                document.querySelector("#impt").style.display = "initial";
+            }
+
+            else {
+                document.querySelector("#impt").style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

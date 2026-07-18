@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIme & Intervals</title>
+</head>
+
+<body>
+    <script>
+        let tm = setTimeout(function () {
+            console.log("Hello");
+        }, 5000);
+
+        let int = setInterval(function () {
+            console.log("Hey!")
+        }, 5000);
+
+        clearTimeout(tm);
+        clearInterval(int);
+
+        // Real World Example
+        let count = 10;
+
+        setInterval(function () {
+            if (count >= 1) {
+                count--;
+                console.log("count");
+            }
+
+            else {
+                clearInterval(!interval);
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
